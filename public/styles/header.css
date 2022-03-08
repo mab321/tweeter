@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #c27400;
+  background-image: url(http://www.transparenttextures.com/patterns/cream-paper.png);
+  position:absolute;
+  margin-top: 80px;
+  
+}
+
+header h2{
+  color:white;
+}
