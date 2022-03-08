@@ -1,0 +1,18 @@
+nav {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color:#FFFFFF;
+  font-family: "Source Sans Pro", sans-serif;
+  position: fixed;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+nav span {
+  font-family: "Bungee", sans-serif;
+}
+
