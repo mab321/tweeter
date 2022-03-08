@@ -16,3 +16,16 @@ nav span {
   font-family: "Bungee", sans-serif;
 }
 
+nav .writeTweet {
+  display: flex;
+  flex-direction: column;
+}
+nav p {
+  margin-bottom: 0px;
+}
+nav #downArrow {
+  display: flex;
+  color:red;
+  justify-content: center;
+}
+
