@@ -1,5 +1,6 @@
 .new-tweet {
  width: 50%;
+ margin-bottom: 10px;
   
 }
 
@@ -19,5 +20,10 @@
   font-family: "Bungee", sans-serif;
   background-color: #4056A1;
   color: white;
+}
+
+.counter {
+  font-family: "Bungee", sans-serif;
+  color: black;
 }
 
