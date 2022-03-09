@@ -69,4 +69,15 @@ const createTweetElement = function(tweet) {
 
 renderTweets(data);
 
+$("#myFormTweet").submit(function(event) {
+  event.preventDefault();
+
+  $.ajax({
+    type: 'POST',
+    url:'/tweets/',
+    data:$(this).serialize(),
+  })
+
+})
+
 });
