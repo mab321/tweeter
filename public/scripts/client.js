@@ -16,7 +16,15 @@ const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     $(".tweet-container").prepend(createTweetElement(tweet)); // use prepend to push down tweets
   }
+  
 }
+// escape to prevent XSS
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 
 const createTweetElement = function(tweet) {
   
@@ -30,7 +38,7 @@ const createTweetElement = function(tweet) {
               
               <h3 class="userHandle"> ${tweet.user.handle}</h3>
           </header>
-          <p class="tweet-memory">${tweet.content.text}</p>
+          <p class="tweet-memory">${escape(tweet.content.text)}</p>
         <footer class="tweet-footer">
             <p>${timeago.format(tweet.created_at)} days ago</p>
             <ul>
@@ -51,6 +59,7 @@ const loadTweets = function() {
    }).then(function(tweets) {
      renderTweets(tweets);
      $("#tweet-text").val('');
+     $(".counter").val(140);
    });
   
   
@@ -71,9 +80,9 @@ $("#myFormTweet").submit(function(event) {
       type: 'POST',
       url:'/tweets/',
       data:$(this).serialize()
-    }).then(function (successfulTweet) {
-      renderTweets(successfulTweet)
-      $("#tweet-text").val('');
+    }).then(function () {
+      // this is to load without refreshing after it tweet has been saved.
+     loadTweets();
     })
   }
 
