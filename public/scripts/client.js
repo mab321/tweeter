@@ -4,6 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+$(document).ready(function() {
+
+  
 const data = [
   {
     "user": {
@@ -33,34 +36,37 @@ const renderTweets = function(tweets) {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
-  const tweetContainer = $(".tweet-container");
   for (const tweet of tweets) {
-    tweetContainer.prepend(createTweetElement(tweet)); // use prepend to push down tweets
+    $(".tweet-container").prepend(createTweetElement(tweet)); // use prepend to push down tweets
   }
 }
 
 const createTweetElement = function(tweet) {
-  let $tweet = `
+  
+  let $tweet = `<div>
       <article class="tweet"> 
         <header>
             <div class="userIcon">
-              <img src=`${tweet.user.avatars}`>
-              <h3 class="userName">`${tweet.user.name}`</h3>
+              <img src=${tweet.user.avatars}>
+              <h3 class="userName">${tweet.user.name}</h3>
             </div>
               
-              <h3 class="userHandle"> `${tweet.user.handle}`</h3>
+              <h3 class="userHandle"> ${tweet.user.handle}</h3>
           </header>
-          <p class="tweet-memory">`${tweet.content.text}`</p>
+          <p class="tweet-memory">${tweet.content.text}</p>
         <footer class="tweet-footer">
-            <p>`${tweet.created_at}` days ago</p>
+            <p>${tweet.created_at} days ago</p>
             <ul>
               <li class="fa-solid fa-flag"></li>
               <li class="fa-solid fa-retweet"></li>
               <li class="fa-solid fa-heart"></li>
             </ul>
         </footer>
-    </article>`
+    </article>
+    </div>`
   return $tweet;
 }
 
 renderTweets(data);
+
+});
