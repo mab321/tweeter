@@ -60,14 +60,22 @@ loadTweets();
 $("#myFormTweet").submit(function(event) {
   event.preventDefault();
 
-  $.ajax({
-    type: 'POST',
-    url:'/tweets/',
-    data:$(this).serialize()
-  }).then(function (successfulTweet) {
-    renderTweets(successfulTweet)
-    $("#tweet-text").val('');
-  })
+  const textInput = event.target[0].value;
+  if (!textInput) {
+    alert("You must enter something to tweet");
+  } else if (textInput.length > 140) {
+    alert("140 max chars are allowed");
+  } else {
+    
+    $.ajax({
+      type: 'POST',
+      url:'/tweets/',
+      data:$(this).serialize()
+    }).then(function (successfulTweet) {
+      renderTweets(successfulTweet)
+      $("#tweet-text").val('');
+    })
+  }
 
 })
 
