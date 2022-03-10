@@ -6,7 +6,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 
 ###### Desktop screen
-!["Desktop screen"]()
+!["Desktop screen"](https://github.com/mab321/tweeter/blob/master/documents/desktopimg.png?raw=true)
 
 ###### Tablet screen
 !["Tablet screen"]()
