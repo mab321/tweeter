@@ -9,9 +9,9 @@ This repository is the starter code for the project: Students will fork and clon
 !["Desktop screen"](https://github.com/mab321/tweeter/blob/master/documents/desktopimg.png?raw=true)
 
 ###### Tablet screen
-!["Tablet screen"]()
-## Getting Started
+!["Tablet screen"](https://github.com/mab321/tweeter/blob/master/documents/tablet.png?raw=true)
 
+## Getting Started
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
 2. Clone your repository onto your local device.
 3. Install dependencies using the `npm install` command.
