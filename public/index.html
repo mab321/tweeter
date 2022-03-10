@@ -50,9 +50,12 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <div id="alertCard">
+            <p class="card-text" id="alertContent">Please limit your tweet to 140 characters only</p>
+        </div>
+        <h2>What are you humming about?</h2>
         <form method="POST" action="/tweets/" id="myFormTweet">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" id="tweet-text"></textarea>
           <div class="submitTweet">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>

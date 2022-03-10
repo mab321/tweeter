@@ -1,5 +1,5 @@
 .new-tweet {
- width: 50%;
+ width: 60vw;
  margin-bottom: 10px;
 
   
@@ -15,6 +15,7 @@
   width:100%;
   border-color: transparent;
   border-bottom: 2px solid black;
+  height: 6em;
 }
 
 .submitTweet button {
@@ -28,3 +29,14 @@
   color: black;
 }
 
+#alertCard {
+  display: none;
+  color: red;
+  border: 2px solid red;
+  
+}
+
+#alertContent {
+  padding: 15px 15px;
+  
+}

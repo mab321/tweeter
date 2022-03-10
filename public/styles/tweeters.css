@@ -7,13 +7,16 @@
   
 }
 .tweet-container div {
-  width: 100%;
+  width: 70vw;
 }
 article.tweet {
   border: 2px solid black;
   margin-top: 15px;
   
 
+}
+article.tweet:hover {
+  box-shadow: 5px 5px grey;
 }
 
 .tweet-container article header {
@@ -28,6 +31,7 @@ article.tweet {
   padding-bottom: 15px;
   padding-left: 15px;
   padding-right: 15px;
+  word-break: break-word;
 
 }
 

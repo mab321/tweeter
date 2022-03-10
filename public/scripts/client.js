@@ -26,6 +26,7 @@ const escape = function (str) {
 };
 
 
+
 const createTweetElement = function(tweet) {
   
   let $tweet = `<div>
@@ -69,11 +70,21 @@ loadTweets();
 $("#myFormTweet").submit(function(event) {
   event.preventDefault();
 
+  $("#alertCard").slideUp(); //hides element by sliding upwards animation
+  
   const textInput = event.target[0].value;
   if (!textInput) {
-    alert("You must enter something to tweet");
+    $("#alertContent").text('Please enter make sure to enter atleast character to tweet');
+    $("#alertCard").slideDown();
+    setTimeout(() => {
+      $("#alertCard").slideUp();
+    }, 3000);
   } else if (textInput.length > 140) {
-    alert("140 max chars are allowed");
+    $("#alertContent").text('Please limit your tweet to 140 characters only');
+    $("#alertCard").slideDown();
+    setTimeout(() => {
+      $("#alertCard").slideUp();
+    }, 3000);
   } else {
     
     $.ajax({
